@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="STYLE.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <h1>Interactive Resume Builder by Ahmed Raza</h1>
+    <form id="resumeForm">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" required><br>
+
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select><br>
+
+            <label for="phone">Contact Number:</label>
+            <input type="tel" name="phone" id="phone"><br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="Education">Education:</label>
+            <textarea name="Education" id="Education" rows="3" required></textarea><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="Experience">Experience:</label>
+            <textarea name="Experience" id="Experience" rows="3" required></textarea><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="Skills">Skills:</label>
+            <textarea name="Skills" id="Skills" rows="3" required></textarea><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Certificates</legend>
+            <label for="certificates">Certificates:</label>
+            <textarea name="certificates" id="certificates" rows="3" placeholder="e.g., Google Analytics Certified, AWS Certified Solutions Architect"></textarea><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Profiles</legend>
+            <label for="link">GitHub:</label>
+            <input type="text" name="link" id="link"><br>
+
+            <label for="linkedin">LinkedIn:</label>
+            <input type="text" name="linkedin" id="linkedin"><br>
+        </fieldset>
+        
+        <button type="submit">Generate Resume</button>
+        <button type="button" id="saveChanges">Save Changes</button>
+        <button id="downloadCV" type="button">Download CV</button>
+    </form>
+
+    <div class="container" id="cvOutput">
+        <div class="left_side">
+            <div class="profiletext">
+                <div class="img8x" id="profilePictureOutput"></div>
+                <h2><div id="nameOutput"></div></h2>
+                <hr class="thin-line">
+                <h3 class="contact-heading">Contact Info</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> <div id="phoneOutput"></div></p>
+                    <p><i class="fas fa-envelope"></i> <div id="emailOutput"></div></p>
+                    <p><i class="fab fa-github"></i> <a class="github-link" id="githubOutput"></a></p>
+                    <p><i class="fab fa-linkedin"></i> <a class="linkedin-link" id="linkedinOutput"></a></p>
+                </div>
+                <h3 class="education-heading">Education</h3>
+                <div class="education-info">
+                    <p><div id="educationOutput"></div></p>
+                </div>
+            </div>
+        </div>
+        <div class="right_side">
+            <h3 class="experience-heading">Experience</h3>
+            <p style="color: gray;"><div id="experienceOutput"></div></p>
+            <h3 class="skills-heading">Skills</h3>
+            <p style="color: gray;"><div id="skillsOutput"></div></p>
+            <h3 class="certifications-heading">Certifications</h3>
+            <p style="color: gray;" id="certificates"><div id="certificatesOutput"></div></p>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script> <!-- Your TypeScript file compiled to JS -->
+</body>
+</html>

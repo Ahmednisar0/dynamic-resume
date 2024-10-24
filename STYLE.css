@@ -1,0 +1,280 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0; /* Changed from 'px' to '0' */
+    padding: 0;
+    background-color: #00FFFF;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 13px rgba(85, 107, 47, 0.5);
+    background-color: #FFFF00;
+    padding: 20px;
+}
+
+fieldset {
+    border: 2px solid #7d5a50;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: #FFFACD;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    margin-top: 8px;
+    display: block;
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-top: 3px;
+}
+
+textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-top: 3px;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin-top: 20px; /* Added 'px' */
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    background-color: rgb(180, 180, 180);
+    box-shadow: 0 6px 12px rgba(80, 10, 245, 0.3); 
+}
+
+button:hover {
+    background-color: #43464b; 
+    box-shadow: 0 6px 12px rgba(0, 85, 179, 0.4); 
+}
+
+/* Save Changes Button Styles */
+#saveChanges {
+  background-color: #00bcd4; /* Cyan background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 10px 5px;   
+}
+
+#saveChanges:hover {
+    /* Darker green on hover */
+    background-color: #ffd700; /* Yellow background on hover */
+    color: #000;
+}
+
+#saveChanges:disabled {
+    background-color: #ccc; /* Gray for disabled state */
+    cursor: not-allowed; /* Change cursor to indicate disabled */
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #00FFFF;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    margin: 50px auto; /* Center the container */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 33px rgba(0, 0, 0, 1);
+    /* Removed min-height */
+    /* Optional: Add padding at the bottom if needed */
+}
+
+
+.left_side {
+    position: relative;
+    background: #003147;
+    padding: 40px;
+    color: white; /* Text color for left side */
+}
+
+.right_side {
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.profiletext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.img8x {
+    width: 200px;
+    border-radius: 50%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.img8x img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    margin: 10px 0; /* Adjusted margin for the name */
+}
+
+.thin-line {
+    width: 100%;
+    height: 2px; /* Increased thickness for visibility */
+    background-color: white; /* Line color */
+    border: none; /* Remove default border */
+    margin: 10px 0; /* Space above and below the line */
+}
+
+.contact-heading,
+.education-heading {
+    margin: 10px 0; /* Space above and below the heading */
+    font-size: 26px; /* Increased font size for the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: #5AC8FA; /* Heading color to match the left side */
+    text-align: left; /* Align the heading to the left */
+}
+.certifications-heading,
+.experience-heading,
+.skills-heading {
+    margin: 10px 0; /* Space above and below the heading */
+    font-size: 26px; /* Increased font size for the heading */
+    font-weight: bold; /* Make the heading bold */
+    color: black; /* Heading color to match the left side */
+    text-align: left; /* Align the heading to the left */
+}
+.contact-info {
+    text-align: left; /* Align text to the left */
+    margin-top: 10px; /* Space above contact info */
+    font-size: 16px; /* Increase font size for contact info */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Margin between contact items */
+}
+
+.contact-info i {
+    margin-right: 8px; /* Increased space between icon and text */
+    color: #8ED6F7; /* Change icon color to blue */
+}
+
+.github-link, .linkedin-link {
+    color: white; /* Change link color */
+    text-decoration: underline; /* Underline for links */
+}
+
+.github-link:hover, .linkedin-link:hover {
+    color: #ddd; /* Change color on hover */
+}
+
+.right_side p {
+    color: gray; /* Set the text color to gray for both sections */
+    margin: 10px 0; /* Add margin for spacing */
+    font-weight: normal; /* Set font weight to normal for paragraphs */
+    font-size: 18px; /* Increased font size for paragraphs */
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+        margin: 20px; /* Reduce margin on smaller screens */
+    }
+
+    .left_side, .right_side {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .contact-heading,
+    .experience-heading,
+    .skills-heading {
+        font-size: 20px;
+         /* Slightly smaller font size for headings on smaller screens */
+    }
+    .experience-heading,
+    .skills-heading {
+        font-size: 20px;
+        color: black; /* Slightly smaller font size for headings on smaller screens */
+    }
+    .contact-info {
+        font-size: 14px; /* Smaller font size for contact info */
+    }
+
+    .img8x {
+        width: 150px; /* Reduce image size */
+        height: 150px; /* Reduce image size */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-heading,
+    .experience-heading,
+    .skills-heading {
+        font-size: 18px; /* Further decrease heading size on smaller screens */
+    }
+
+    .contact-info {
+        font-size: 12px; /* Further decrease font size for contact info */
+    }
+}
+button {
+    background-color: #00bcd4; /* Cyan background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 10px 5px;
+}
+
+button:hover {
+    background-color: #ffd700; /* Yellow background on hover */
+    color: #000; /* Black text on hover */
+}
+#downloadPDF{    background-color: #00bcd4; /* Cyan background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    justify-content: end;
+    transition: background-color 0.3s ease;
+    margin: 10px 5px;}
+    #downloadPDF:hover {
+        background-color: #ffd700; /* Yellow background on hover */
+    color: #000;
+    }
